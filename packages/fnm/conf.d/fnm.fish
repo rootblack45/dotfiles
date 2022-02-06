@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-fnm env | source
+fnm env --use-on-cd | source
