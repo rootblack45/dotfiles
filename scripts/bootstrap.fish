@@ -10,7 +10,7 @@ ohai "DOTFILES_ROOT=$DOTFILES_ROOT; DOTFILES_PKG=$DOTFILES_PKG"
 ohai "Creating dotfiles symlink.."
 for f in $DOTFILES_PKG/*/*.symlink
     ln -sf $f $HOME/.(basename $f .symlink)
-        and ok "Creared dotfile symlink for $f"
+        and ok "Created dotfile symlink for $f"
         or warn "Failed to create dotfile symlink for $f"
 end
 
