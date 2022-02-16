@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-alias cat="bat --paging=never --theme=OneHalfLight"
+alias cat="bat --theme=OneHalfLight"
