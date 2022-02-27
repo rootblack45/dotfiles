@@ -4,7 +4,7 @@
   	excludesfile = ~/.gitignore
 [user]
 	email = rootblack45@gmail.com
-	name = Arongkorn P.
+	name = Arongkorn
 	signingKey = C6DE4CD09D6110CF2059A3D74DF5AAE6A97F6609
 [commit]
   	gpgSign = true
