@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-alias cat="bat --theme=OneHalfLight"
+alias cat="bat"
