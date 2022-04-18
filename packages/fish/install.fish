@@ -4,4 +4,7 @@ if not type -q omf
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 end
 
-omf install boxfish
+if not omf list | grep -q boxfish
+    omf install boxfish
+end
+
