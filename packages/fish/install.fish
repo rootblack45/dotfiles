@@ -9,3 +9,6 @@ if ! omf list | grep -q boxfish
     omf theme boxfish
 end
 
+# set default shell
+echo (which fish) >> /etc/shells
+chsh -s (which fish)
