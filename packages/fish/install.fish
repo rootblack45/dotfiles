@@ -10,5 +10,7 @@ if ! omf list | grep -q boxfish
 end
 
 # set default shell
-echo (which fish) >> /etc/shells
-chsh -s (which fish)
+if ! grep -q (which fish) /etc/shells
+    sudo echo (which fish) >> /etc/shells
+    chsh -s (which fish)
+end
