@@ -1,1 +1,5 @@
 Brewfile.lock.json
+
+# Generated packer file
+packages/nvim/nvim/plugin/packer_compiled.lua
+
