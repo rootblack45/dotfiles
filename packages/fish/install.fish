@@ -14,3 +14,4 @@ if ! grep -q (which fish) /etc/shells
     sudo echo (which fish) >> /etc/shells
     chsh -s (which fish)
 end
+
