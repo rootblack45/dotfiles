@@ -1,0 +1,20 @@
+set -g mouse on
+set -sg escape-time 0
+set -g focus-events on
+set -g set-titles on
+set -g base-index 1
+set -g renumber-windows on
+set -g automatic-rename-format '#{b:pane_current_path}'
+set -g window-status-format " #I:#W#F "
+set -g window-status-current-format " #I:#W#F "
+set -s extended-keys always
+set -ga terminal-overrides ",alacritty:RGB"
+setw -g pane-base-index 1
+setw -g automatic-rename on
+
+# Colors
+set -g status-style bg=default,fg=default
+set -g pane-border-style bg=default,fg=terminal
+set -g pane-active-border-style bg=default,fg=green
+setw -g window-status-style bg=default,fg=default
+setw -g window-status-current-style bg=default,fg=green
