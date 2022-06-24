@@ -1,11 +1,4 @@
-local api, lsp = vim.api, vim.lsp
-
-api.nvim_create_autocmd('BufWritePre', {
-    pattern = '*.lua',
-    callback = function()
-        lsp.buf.formatting_seq_sync(nil, 3000)
-    end,
-})
+local api = vim.api
 
 return {
     settings = {

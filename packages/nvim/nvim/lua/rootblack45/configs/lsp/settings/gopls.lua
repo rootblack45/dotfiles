@@ -5,13 +5,6 @@ local util = require 'lspconfig/util'
 api.nvim_create_autocmd('BufWritePre', {
     pattern = '*.go',
     callback = function()
-        lsp.buf.formatting_seq_sync(nil, 3000)
-    end,
-})
-
-api.nvim_create_autocmd('BufWritePre', {
-    pattern = '*.go',
-    callback = function()
         local params = lsp.util.make_range_params(nil, lsp.util._get_offset_encoding())
         params.context = { only = { 'source.organizeImports' } }
 

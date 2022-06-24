@@ -1,4 +1,4 @@
-local deep_ext = vim.tbl_deep_extend
+local api, lsp, deep_ext = vim.api, vim.lsp, vim.tbl_deep_extend
 
 local lsp_servers = {
     'clangd',
@@ -44,3 +44,9 @@ for _, srv in pairs(lsp_servers) do
     end
     lspconfig[srv].setup(opts)
 end
+
+api.nvim_create_autocmd('BufWritePre', {
+    callback = function()
+        lsp.buf.formatting_seq_sync(nil, 3000)
+    end,
+})
