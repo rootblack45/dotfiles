@@ -117,6 +117,9 @@ return packer.startup(function(use)
     -- Discord Rich Presence
     use 'andweeb/presence.nvim'
 
+    -- GitHub Copilot
+    use 'github/copilot.vim'
+
     -- automatically set up your configuration after cloning packer.nvim
     -- ** put this at the end after all plugins **
     if packer_bootstrap then
