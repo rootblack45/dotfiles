@@ -14,12 +14,21 @@ local with_root_file = function(...)
     end
 end
 
+-- local node modules bin dir
+local project_node_bin = 'node_modules/.bin'
+local local_eslint = project_node_bin .. '/eslint'
+local local_prettier = project_node_bin .. '/prettier'
+
 null_ls.setup {
     sources = {
         -- formatting
         formatting.clang_format,
-        formatting.eslint,
-        formatting.prettier,
+        formatting.eslint.with {
+            command = with_root_file(local_eslint) and local_eslint or 'eslint',
+        },
+        formatting.prettier.with {
+            command = with_root_file(local_prettier) and local_prettier or 'eslint',
+        },
         formatting.stylua.with {
             condition = with_root_file 'stylua.toml',
         },
@@ -27,13 +36,17 @@ null_ls.setup {
         -- diagnostics
         diagnostics.cppcheck,
         diagnostics.hadolint,
-        diagnostics.eslint,
+        diagnostics.eslint.with {
+            command = with_root_file(local_eslint) and local_eslint or 'eslint',
+        },
         diagnostics.selene.with {
             condition = with_root_file 'selene.toml',
         },
         diagnostics.flake8,
         diagnostics.fish,
         -- code_actions
-        code_actions.eslint,
+        code_actions.eslint.with {
+            command = with_root_file(local_eslint) and local_eslint or 'eslint',
+        },
     },
 }
