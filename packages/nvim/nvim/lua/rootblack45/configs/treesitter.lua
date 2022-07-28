@@ -19,6 +19,7 @@ configs.setup {
         'lua',
         'python',
         'rust',
+        'sql',
         'svelte',
         'toml',
         'css',
