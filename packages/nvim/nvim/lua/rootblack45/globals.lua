@@ -10,6 +10,7 @@ local globals = {
     UltiSnipsListSnippets = '<c-x><c-s>',
     UltiSnipsRemoveSelectModeMappings = 0,
     gruvbox_italic = 1,
+    omni_sql_default_compl_type = 'syntax', -- default to static completion for SQL
 }
 
 for k, v in pairs(globals) do
