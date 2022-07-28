@@ -120,6 +120,9 @@ return packer.startup(function(use)
     -- GitHub Copilot
     use 'github/copilot.vim'
 
+    -- Wakatime
+    use 'wakatime/vim-wakatime'
+
     -- automatically set up your configuration after cloning packer.nvim
     -- ** put this at the end after all plugins **
     if packer_bootstrap then
